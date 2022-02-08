@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript Example</title>
+</head>
+<body>
+  <h1>JavaScript Form validation Example</h1>
+  <form>
+    <input type = "password"  id = "password" placeholder="Password">
+    <input type = "password"  id = "ConfirmPassword" placeholder="Confirm Password">
+    <input type = "reset"  id = "reset" >
+    <input type = "button"  id = "submit" value="Submit">
+  </form>
+  <p id="Response"></p>
+
+  <script>
+      function chkPWord() {
+          var password = document.getElementById("password");
+          var confirmPassword = document.getElementById("ConfirmPassword");
+          var text = document.getElementById("Response");
+        
+
+          if (password.value === "") {
+              text.innerHTML="You did not enter a password<br>Please enter one now";
+              text.style.color="red";
+          } else if (password.value === confirmPassword.value) {
+              text.innerHTML="Hooray! You have matched passwords!";
+              text.style.color="green";
+          } else {
+              text.innerHTML="The two passwords you entered are not the same<br>Please re-enter both now";
+              text.style.color="blue";
+          }
+      }
+
+      //Register listener
+      document.getElementById("submit").addEventListener('click',chkPWord);
+  </script>
+</body>
+</html>
