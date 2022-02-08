@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript Example</title>
+</head>
+<body>
+  <h1> Form validation Example - Client side only</h1>
+  <form>
+    <input type = "text"  id = "name" placeholder="last, first name ">
+    <input type = "text"  id = "phone" placeholder="Phone No. (ddd-ddd-dddd)">
+    <input type = "reset"  id = "reset" >
+    <input type = "submit"  id = "submit" >
+  </form>
+
+  <script>
+  // HTML5 element id becomes global variable.
+  /* <inout id="okay" /> you can refer to that element using the global variable okay. 
+  However, this doesn't work if the Window object already has a property by that name. 
+  Elements with the ids "history", "location" or "navigator" won't appear as global variables 
+  because IDs are already in use.
+
+  If your HTML document includes an element whose ids "x" and you also declare and 
+  assign a value to the global variable x in your code, 
+  the explicitly declared variable will hide the implicit element variable.
+  Reference: JavaScript: The Definite Guide by David Flangan
+  */
+  function chkPhone() {
+	  var phone = document.getElementById("phone");
+    var pos = phone.value.search(/^\d{3}-\d{3}-\d{4}$/);
+    if (pos === -1) {
+       alert("The phone number you entered (" + phone.value + ") is not in the correct form. \n" +
+              "The correct form is: ddd-ddd-dddd \n" + "Please go back and fix your phone number");
+       return false;
+    }
+    else
+       return true;
+  }
+  function chkName() {
+    var name = document.getElementById("name");
+    var pos = name.value.search(/^[A-Z][a-z]+, [A-Z][a-z]+$/);
+    if (pos === -1) {
+      alert("The name you entered (" + name.value + ") is not in the correct form. \n" +
+          "The correct form is: " + "Last-name, First-name \n" + "Unfortunately, it is case-sensitive");
+      //myName.focus();
+      return false;
+    }
+    else
+      return true;
+  }
+  // Register listeners
+  document.getElementById("name").addEventListener('change',chkName);
+  document.getElementById("phone").addEventListener('change',chkPhone);
+
+  // expected output?
+  console.log(false == '0');
+  console.log(false == 0);
+  console.log(false == "0");
+  console.log(null == undefined);
+  console.log("\t\r\n" == 0);
+  console.log('' == 0);
+
+  console.log(true == 1);
+  
+  </script>
+</body>
+</html>
