@@ -13,7 +13,8 @@
         </style>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #509df5;">
+      <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FFFFFF;">
             <a class="navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -24,8 +25,83 @@
                 <a class="nav-item nav-link" href="#">Expierence</a>
                 <a class="nav-item nav-link" href="#">WebDev Class</a>
                 <a class="nav-item nav-link" href="#">Contact</a>
+                
+                <button class="btn btn-outline-success" type="button" id="resume">Resume</button>
               </div>
             </div>
           </nav>
+
+          <div class="container">
+            <!--About Me Row-->
+            <div class="row">
+              <!--Heading for About Me-->
+              <div class="row">
+                <h1>About Me!</h1>
+              </div>
+              <!--About Me Content-->
+              <div class="row">
+                <!--Info About Me-->
+                <div class="col-lg">
+                  <div class="col-lg">
+                    <p>Hello! My name is Derek Tomassi and I'm a Senior at Bridgewater State University. I study Computer Science and plan on specializing in
+                       Web Development and Software Enginnering.</p>
+                  </div>
+                  <div class="col-lg">
+                    <p>I first started programming in High School in a AP Computer Science class and my love for Programming grew from there. As I began trying different projects from using API's
+                       to create Discord Bots to trying game development in Unity I found what I found myself enjoying the most was Web Development.</p>
+                  </div>
+                  <div class="col-lg">
+                    <p>Also in another passion of mine is music creation and have extensive knowledge in Digital Audio Workstations such as FL Studio 2</p>
+                  </div>
+                </div>
+                <!--Programming Skills-->
+                <div class="col-lg">
+                    <p>Here are my programming languages:</p>
+                    <ul>
+                      <li>Java</li>
+                      <li>Python</li>
+                      <li>C++</li>
+                      <li>C</li>
+                      <li>Kotlin</li>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>JavaScript</li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+            <!--Expierence Row-->
+            <div class="row">
+              <!--Heading for Expierence-->
+              <div class="row">
+                <h1>Expierence</h1>
+              </div>
+              <!--Expirence Content-->
+              <div class="row">
+                <div class="col-lg">
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Dropdown button
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg">
+                  <h3 id="expierenceHeading"></h3>
+                  <ul>
+                    <li id="expierenceBullet1"></li>
+                    <li id="expierenceBullet2"></li>
+                    <li id="expierenceBullet3"></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <script src="homepage.js"></script>
     </body>
 </html>
