@@ -1,11 +1,258 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-<head>
-  <title>My Webpage</title>
-</head>
-<body>
-  <h1>Derek Tomassi!!</h1>
-  <a href="Assignments/Assignment0/Assignment0.html">Assignment 0</a>
-  <br><a href="Exercises/Exercises.html">Exercises</a>
-</body>
+    <head>
+        <title>Homepage</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+        <script src="https://kit.fontawesome.com/f4a65582f6.js" crossorigin="anonymous"></script>
+
+        <style>
+            @media only screen and (max-width:720px)
+            {
+              img {display: none; }
+            }
+        </style>
+    </head>
+    <body>
+      <!--Navbar-->
+      <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
+        <a class="navbar-brand" href="#">Derek Tomassi Jr</a>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading1">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading2">Expierence</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading3">WebDev Class</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading4">Contact</a>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="btn btn-success" id="resume">Resume</button>
+          </li>
+        </ul>
+      </nav>
+          <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="container" tabindex="0">
+            <!--About Me Row-->
+            <div class="row justify-content-center" id="scrollspyHeading1">
+              <!--Heading for About Me-->
+              <div class="row">
+                <h1><i class="fa-regular fa-face-grin-beam"></i> About Me!</h1>
+              </div>
+              <!--About Me Content-->
+              <div class="row">
+                <!--Info About Me-->
+                <div class="col-lg">
+                  <div class="col-lg">
+                    <p>Hello! My name is Derek Tomassi and I'm a Senior at Bridgewater State University. I study Computer Science and plan on specializing in
+                       Web Development and Software Enginnering.</p>
+                  </div>
+                  <div class="col-lg">
+                    <p>I first started programming in High School in a AP Computer Science class and my love for Programming grew from there. As I began trying different projects from using API's
+                       to create Discord Bots to trying game development in Unity I found what I found myself enjoying the most was Web Development.</p>
+                  </div>
+                  <div class="col-lg">
+                    <p>Also in another passion of mine is music creation and have extensive knowledge in Digital Audio Workstations such as FL Studio 20</p>
+                  </div>
+                </div>
+                <!--Programming Skills-->
+                <div class="col-lg">
+                    <p>Here are my programming languages:</p>
+                    <ul>
+                      <li>Java</li>
+                      <li>Python</li>
+                      <li>C++</li>
+                      <li>C</li>
+                      <li>Kotlin</li>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>JavaScript</li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+            <!--Expierence Row-->
+            <div class="row justify-content-center" id="scrollspyHeading2">
+              <!--Heading for Expierence-->
+              <div class="row">
+                <h1><i class="fa-solid fa-briefcase"></i> Expierence</h1>
+              </div>
+              <!--Expirence Content-->
+              <div class="row">
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Discord Bot Development
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <p>In this project I created a bot for <strong>Discord</strong> using the <strong>DiscordPy API</strong>. The bot was made to create events for servers. A user would create
+                        an event and give it a title, user count, time and date, and optionally a game to associate with the event. After the event was created users could use commands in the text
+                        channel to join the event if the event hadn't already occured or if the event wasn't full. At the time of the event the bot would ping joined users that the event has
+                        started and a voice channel to join.</p>
+                        <p>Skills used for this project: </p>
+                        <ul>
+                          <li>Using an existing API and Documentation</li>
+                          <li>Python Coding</li>
+                          <li>Interacting with a website (Discord)</li>
+                          <li>User testing</li>
+                          <li>Project Planning (Trello)</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Software Engineering Python Project
+                      </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <p>This project was conducted during my Software Engineering class. The task was to create a program for a fictional client which in this case was a university. The program
+                          was used for managing and maintaining student information, staff information, and course information. You were able to create, delete, and edit information for all three
+                          different categories (student, faculty, and course). This project was done in a group of 4 with my focus handling the course information of the project. <a href="https://github.com/Maximus3333/north_star_project">The
+                          project can be found on my classmates github.</a>
+                        </p>
+                        <p>Skills used for this project: </p>
+                        <ul>
+                          <li>Holding weekly SCRUM Meetings</li>
+                          <li>Creating Use Cases</li>
+                          <li>Create Object Models</li>
+                          <li>Using GitHub collaboratively with others</li>
+                          <li>Code Review</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Java Swing GUI Development
+                      </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <p>This project was done for my Senior project for my Computer and Information Systems class. I chose for my project to create a program for employee scheduling for a company.
+                         What the program would do would be to create Employee objects that you could then schedule for the week. The Program would then be able to display the weekly calendar for all
+                         the active employees.
+                        </p>
+                        <p>Skills used for this project: </p>
+                        <ul>
+                          <li>Java Programming</li>
+                          <li>Using Java Swing Library</li>
+                          <li>GUI Design</li>
+                          <li>Presenting Code to Others</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Unity 2D/3D Game Development
+                      </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <p>This project was done with a couple of my friends for something to do over the summer for fun. We ended up learning how to make small 2D and 3D games in the Unity Engine through tutorials
+                          on YouTube and Udemy. Using the engine we worked together using the Unity Calloborate tool and made some very small games to get us some expierence in the game development world.
+                        </p>
+                        <p>Skills used for this project: </p>
+                        <ul>
+                          <li>C# Programming</li>
+                          <li>Using Unity Library</li>
+                          <li>Collaborating with Non-Progammers</li>
+                          <li>Using a Game Engine</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        UNIX Operating System
+                      </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <p>This project was done for my Operating Systems class. Over the course of the semester we slowly went through step by step and recreated an Operating System from scratch in Linux. The goal
+                          for the end of the project was to end up with results close to the power of the original UNIX operating system. This was made using bare minimum c coding with no librarys other than 
+                          the ones provided in assembly.
+                        </p>
+                        <p>Skills used for this project: </p>
+                        <ul>
+                          <li>C Programming</li>
+                          <li>Troubleshooting Code</li>
+                          <li>Low-Level Programming</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br>
+            <!--WebDev Class Row-->
+            <div class="row justify-content-center" id="scrollspyHeading3">
+              <!--Heading for WebDev Class-->
+              <div class="row">
+                <h1><i class="fa-regular fa-file-code"></i> WebDev Class</h1>
+              </div>
+              <!--WebDev Class Content-->
+              <div class="row">
+                <!--Assignment 0-->
+                <div class="row">
+                  <h2>Assignment 0 - Area Maps</h2>
+                </div>
+                <div class="row">
+                  <div class="col-lg">
+                    <a href="#">
+                      <img alt="Assignment0 Image" src="Assignment0Image.png" width="500" height="500">
+                    </a>
+                  </div>
+                  <div class="col-lg">
+                    <p>In this assignment we were tasked to create and image area map with 5 clickable areas. I chose to use pictures of my 5 favorite muscic artists. I then had to put an about
+                      me sections followed by listing 10 inspirational websites. <br>
+                      Skills Learned: <br>
+                      <ul>
+                        <li>HTML Basics</li>
+                        <li>Creating Area Maps</li>
+                        <li>Linked Audio</li>
+                        <li>Researching Other Websites</li>
+                      </ul>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br>
+            <!--Contact Row-->
+            <div class="row justify-content-center" id="scrollspyHeading4">
+              <!--Heading for Contact Row-->
+              <div class="row">
+                <h1><i class="fa-solid fa-address-book"></i>Contact</h1>
+              </div>
+              <!--Contact Content-->
+              <div class="row">
+                <h3>I'm Currently Looking for Software Engineering Internships</h3>
+                <p>Please feel free to contact me via email or LinkedIn for any work opportunities</p>
+                <br>
+                <h4><i class="fa-solid fa-envelope"></i> <a href="mailto:derektomassi@me.com" class="contactLink">Email</a></h4>
+                <h4><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/derek-t-a81447209/" class="contactLink">Linkedin</a></h4>
+                <h4><i class="fa-brands fa-github"></i> <a href="https://github.com/DerekTomassiJr" class="contactLink">GitHub</a></h4>
+              </div>
+            </div>
+          </div>
+          <script src="homepage.js"></script>
+    </body>
 </html>
