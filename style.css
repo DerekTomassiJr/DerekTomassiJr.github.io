@@ -1,5 +1,13 @@
+.nav-link {
+    color: #FFFFFF;
+}
+
 .contactLink {
     color: #FFFFFF;
+}
+
+.navbar {
+    background-color: #0093E9;
 }
 
 body {
