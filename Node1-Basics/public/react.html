@@ -1,0 +1,30 @@
+<html>
+<head>
+    <!--
+        Browsers do not understand JSX. It should be transformed into regular javaScript. 
+        To do this, a compiler is needed. The compiler that does this is Babel.
+        We should ideally pre-compile the code and inject it into the browser, 
+        but for simple example like “Hello World”, 
+        Babel provides a standalone compiler that can be used in the browser. 
+        The compiler also needs to be told which scripts should be transformed, 
+        so must include type="text/babel"
+    -->
+    <title>React Hello</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="hello">
+    <!-- This element's contents will be replaced with your component. -->
+</div>
+<div id="uploader">
+    <!-- This element's contents will be replaced with your component. -->
+</div>
+<!-- Load our React component. -->
+<script src="./javascripts/reactHello.js" type="text/babel"></script>
+<script src="./javascripts/reactUploader.js" type="text/babel"></script>
+<script src="./javascripts/uploader.js" type="text/babel"></script>
+
+</body>
+</html>
