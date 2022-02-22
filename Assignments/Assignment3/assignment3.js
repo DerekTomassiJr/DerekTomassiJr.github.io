@@ -48,7 +48,9 @@ function pausePlay() {
     if (inViewport() === false) {
         player.pauseVideo();
     } else {
-        player.playVideo();
+        if (player.getPlayerState() !== -1) {
+          player.playVideo();
+        }
     }
 }
 //Code for player to stop outside of viewport
