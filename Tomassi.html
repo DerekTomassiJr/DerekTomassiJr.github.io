@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Multiplication Table</title>
+
+    <style>
+        error {color: red;}
+
+        calendar > div {float:left; width:80px;}
+
+        .end{clear:both;}
+    </style>
+</head>
+<body>
+    <h1>Exam: Display Multiplication Table</h1>
+    <form>
+        <input type = "text" id="row" value="10" placeholder="e.g., 10">
+        &nbsp; Enter a number for a row (Max: 99)<br>
+        <input type="text" id="column" value="10" placeholder="e.g., 10">
+        &nbsp; Enter a number for a column (Max: 99)<br>
+
+        <input type="reset" id="reset">
+        <input type="button" id="submit" value="submit">
+    </form>
+    <br>
+    <!-- printing table and error messages-->
+    <error id="error"></error>
+    <h2 id="heading"></h2>
+    <calendar id="table"></calendar>
+
+    <script>
+        var error = document.getElementById("error");
+        var heading = document.getElementById("heading");
+        var table = document.getElementById("table");
+
+        //error checking row number
+        function chkrow() {
+            table.innerHTML="";
+            heading.innerHTML="";
+            var row = document.getElementById("row").value;
+            if (row.length > 2 || typeof(row) === "string") {
+                error.innerHTML = "The <strong>row number</strong> is out of valid range";
+            }
+        }
+
+        //error checking column number
+        function chkcolumn() {
+            table.innerHTML="";
+            heading.innerHTML="";
+            var column = document.getElementById("column").value;
+            if (column.length > 2 || typeof(column) === "string") {
+                error.innerHTML = "The <strong> column number</strong> is out of valid range";
+            }
+        }
+
+        //Displaying the table
+        function chksubmit() {
+            var rowNums = document.getElementById("row").value;
+            var colNums = document.getElementById("column").value;
+
+            //checking for errors and not display table is one is present
+            if (error.innerHTML !== "") {
+                return;
+            }
+
+            heading.innerHTML = rowNums + " by " + colNums + " multiplication table";
+
+            var row, col;
+            for (col = 0; col <= colNums; col++) {
+                for (row = 0; row <= rowNums; row++) {
+                    //printing *
+                    if (row === 0 && col === 0) {
+                        table.innerHTML += "<div>*</div>";
+                    } else if (row > 0 && col === 0) {
+                        table.innerHTML += "<div style=\"color:red;\">" + row + "</div>";
+                    } else if (row === 0 && col > 0) {
+                        table.innerHTML += "<div style=\"color:red;\">" + col + "</div>";
+                    } else {
+                        table.innerHTML += "<div>" + (row*col) + "</div>";
+                    }                    
+                }
+                table.innerHTML += "<div class=\"end\"></div>"
+            }
+        }
+        
+        //Register Listeners
+        document.getElementById("row").addEventListener('change', chkrow);
+        document.getElementById("column").addEventListener('change', chkcolumn);
+        document.getElementById("submit").addEventListener('click', chksubmit);
+    </script>
+</body>
+</html>
