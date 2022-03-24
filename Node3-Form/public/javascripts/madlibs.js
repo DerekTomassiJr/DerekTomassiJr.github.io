@@ -1,6 +1,6 @@
 const element =(
     <div>
-      <h1>ITEMS FROM A GOSSIP COLUMN</h1>
+      <h1>Elizabeth the First</h1>
       <h3>Input Your Word Choices: </h3>
       <form method="post" id="form">
           <label> Adjective #1: </label>
