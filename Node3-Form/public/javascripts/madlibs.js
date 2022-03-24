@@ -3,23 +3,35 @@ const element =(
       <h1>ITEMS FROM A GOSSIP COLUMN</h1>
       <h3>Input Your Word Choices: </h3>
       <form method="post" id="form">
-          <label> Article of Clothing: </label>
-          <input type="text" id="clothing" placeholder="socks"></input><br />
+          <label> Adjective #1: </label>
+          <input type="text" id="adjective1" placeholder="loose" value="Loose"></input><br />
           
-          <label> Female Person You Know #1: </label> 
-          <input type="text" id="female1" placeholder="Ada Lovelace"></input><br />
+          <label> Adjective #2: </label> 
+          <input type="text" id="adjective2" placeholder="awful" value="Awful"></input><br />
           
-          <label> Female Person You Know #2: </label>
-          <input type="text" id="female2" placeholder="Princess Leia"></input><br />
+          <label> Adjective #3: </label>
+          <input type="text" id="adjective3" placeholder="bloody" value="Bloody"></input><br />
 
-          <label> Male Person You Know #1: </label>
-          <input type="text" id="male1" placeholder="Alan Turing"></input><br />
+          <label> Adverb: </label>
+          <input type="text" id="adverb" placeholder="extremely" value="Extremely"></input><br />
 
-          <label> Male Person You Know #2: </label>
-          <input type="text" id="male2" placeholder="Luke Skywalker"></input><br />
+          <label> Celebrity #1: </label>
+          <input type="text" id="celeb1" placeholder="Paul Dano" value="Paul Dano"></input><br />
 
-          <label>Plural Noun: </label>
-          <input type="text" id="noun" placeholder="Controllers"></input><br /><br />
+          <label>Celebrity #2: </label>
+          <input type="text" id="celeb2" placeholder="Brad Pitt" value="Brad Pitt"></input><br />
+
+          <label> Name of Person: </label>
+          <input type="text" id="person" placeholder="John Man" value="John Man"></input><br />
+
+          <label> Noun #1: </label>
+          <input type="text" id="noun1" placeholder="Hatchet" value="Hatchet"></input><br />
+
+          <label> Noun #2: </label>
+          <input type="text" id="noun2" placeholder="Earth" value="Earth"></input><br />
+
+          <label> Superlative Adjective: </label>
+          <input type="text" id="supadjective" placeholder="Angriest" value="Angriest"></input><br /><br />
 
           <input type="submit" value="See the Results!"></input>
       </form>
@@ -62,13 +74,18 @@ const element =(
     let data = JSON.parse(xhttp.response);
     let echo = (
       <div>
-        <p><strong> {data.female1} </strong> and her ex-husband <strong> {data.male1} </strong><br />
-        were seen last night at the Twenty-Three Club holding<br />
-        <strong> {data.male2}. </strong> Could it be reconcilliation? The international heartthrob,<br />
-        <strong>  {data.male2}, </strong> and the glamourous top model,<br />
-        <strong> {data.female2}, </strong> are expecting their first baby in November.<br />
-        <strong> {data.female2} </strong> is denying stork rumors,<br />
-        but yesterday she was buying a maternity <strong> {data.noun} </strong></p>
+        <p>Elizabeth, the Tudor <strong> {data.noun1} </strong> of England, as probably the <br />
+        <strong> {data.supadjective} </strong> ruler the British ever had. Elizabeth was the<br />
+        daughter of Henry the Eighth and Ane Boleyn. Later, Anne had <br />
+        her <strong> {data.noun2} </strong> chopped off by Henry.<br />
+        Elizabeth was born in 1533 and became Queen when she was 25. She<br />
+        was a <strong> {data.adjective1} </strong> Protestant and persecuted the <strong> {data.adjective2} </strong><br />
+        Catholics <strong> {data.adverb}. </strong> In 1558, the Armada<br />
+        attacked England. But the English fleet, commanded by <strong> {data.celeb1} </strong><br />
+        and <strong> {data.celeb2}, </strong> defeated them. Elizabeth ruled for 45 years,<br />
+        and during her reign of England prospered and produced Shakespear,<br />
+        Francis Bacon, and <strong> {data.person}. </strong> Elizabeth never married,<br />
+        which is why she is sometimes called the <strong> {data.adjective3} </strong> Queen.</p>
       </div>
     );
     

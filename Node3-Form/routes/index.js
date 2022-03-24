@@ -26,12 +26,16 @@ router.get('/madlibs', function(req, res) {
 
 router.post('/madlibs', function(req, res) {
   res.json({
-    clothing: req.body.clothing,
-    female1: req.body.female1,
-    female2: req.body.female2,
-    male1: req.body.male1,
-    male2: req.body.male2,
-    noun: req.body.noun
+    adjective1: req.body.adjective1,
+    adjective2: req.body.adjective2,
+    adjective3: req.body.adjective3,
+    adverb: req.body.adverb,
+    celeb1: req.body.celeb1,
+    celeb2: req.body.celeb2,
+    person: req.body.person,
+    noun1: req.body.noun1,
+    noun2: req.body.noun2,
+    supadjective: req.body.supadjective
   });
 });
 
